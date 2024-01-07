@@ -2,6 +2,15 @@
 
 def bubble_sort(iterable, reverted=False):
 
+    """
+    Sort iterable in-place (i.e. the list itself is modified), stable (i.e. the
+        order of two equal elements is maintained) and return sorted.
+
+    :param iterable: Sort the list in ascending order and return
+    :param reverted: Indicate descending order
+    :return: Sorted iterable
+    """
+
     if not hasattr(iterable, '__iter__'):
         raise TypeError(f"'{type(iterable).__name__}' object is not iterable")
     if not hasattr(iterable, '__len__'):
