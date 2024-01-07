@@ -1,6 +1,6 @@
 
 
-def bubble_sort(iterable, reverted=False: bool):
+def bubble_sort(iterable, reverted: bool = False):
 
     """
     Sort iterable in-place (i.e. the list itself is modified), stable (i.e. the
