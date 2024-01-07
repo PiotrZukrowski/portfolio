@@ -17,7 +17,7 @@ def bubble_sort(iterable, reverted=False):
         raise TypeError(f"'{type(iterable).__name__}' object has not '__len__' operator defined")
     if not reverted and not hasattr(iterable, '__gt__'):
         raise TypeError(f"'{type(iterable).__name__}' object has not '__gt__' operator defined")
-    if not reverted and not hasattr(iterable, '__lt__'):
+    if reverted and not hasattr(iterable, '__lt__'):
         raise TypeError(f"'{type(iterable).__name__}' object has not '__lt__' operator defined")
 
     length = len(iterable)
