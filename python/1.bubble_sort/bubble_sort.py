@@ -9,7 +9,7 @@ def bubble_sort(iterable, reverted: bool = False):
         order of two equal elements is maintained) and return sorted.
 
     :param iterable: Data
-    :param reverted: Indicate descending order
+    :param reverted: Descending sorting order indicator
     :return: Sorted iterable
     """
 
