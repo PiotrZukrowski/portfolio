@@ -39,3 +39,4 @@ if __name__ == '__main__':
     print(f'{a}')
     print(f'{bubble_sort(a) = }')
     print(f'{bubble_sort(a, reverted=True) = }')
+    help(__name__)
