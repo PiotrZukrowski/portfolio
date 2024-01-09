@@ -1,4 +1,6 @@
-
+"""
+Sorting function based on bubble sort algorithm.
+"""
 
 def bubble_sort(iterable, reverted: bool = False):
 
