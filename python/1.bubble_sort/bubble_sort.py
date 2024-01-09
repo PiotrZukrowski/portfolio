@@ -36,7 +36,7 @@ def bubble_sort(iterable, reverted: bool = False):
 
 if __name__ == '__main__':
     a: list = [0, 2, 1, 3]
-    print(f'{a}')
+    print(f'{a = }')
     print(f'{bubble_sort(a) = }')
     print(f'{bubble_sort(a, reverted=True) = }')
     help(__name__)
