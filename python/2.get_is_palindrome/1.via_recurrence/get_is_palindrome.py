@@ -34,6 +34,7 @@ if __name__ == '__main__':
     a = 'kajak'
     print(f'{a = }')
     print(f'{get_is_palindrome(a) = }')  # sunny day scenario
+    help(__name__)
 
     # rainy day
     b = 'kaja'
