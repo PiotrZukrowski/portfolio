@@ -40,3 +40,11 @@ if __name__ == '__main__':
     print(f'{bubble_sort(a) = }')
     print(f'{bubble_sort(a, reverted=True) = }')
     help(__name__)
+
+    # rainy day . special
+    b = object()
+    print(f'{b = }')
+    try:
+        print(f'{bubble_sort(b) = }')  # rainy day scenario, wrong type
+    except TypeError as error:
+        print(f'{error = }')
