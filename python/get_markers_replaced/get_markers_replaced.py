@@ -8,7 +8,8 @@ def get_markers_replaced(string: str, markers: list[str]):
     """
     Return copy of given string with marks replaced by input from user.
     Assume natural language - marks correspond to whole words,
-        prefixed with whitespace character and postfixed with whitespace character or sequence generated from ',.?!;'.
+        may be prefixed with whitespace character
+        and may be postfixed with whitespace character or sequence generated from ',.?!;'.
     Every whitespace character sequence is replaced with single space.
 
     :param string: Data under parsing.
