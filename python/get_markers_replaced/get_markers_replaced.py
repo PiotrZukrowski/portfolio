@@ -6,7 +6,7 @@ Parser replacing markers from string.
 def get_markers_replaced(string: str, markers: list[str]):
 
     """
-    Return copy of given string with marks replaced by input from user.
+    Return copy of given string with marks replaced with input from user.
     Assume natural language - marks correspond to whole words,
         may be prefixed with whitespace character
         and may be postfixed with whitespace character or sequence generated from ',.?!;'.
@@ -36,6 +36,18 @@ def get_markers_replaced(string: str, markers: list[str]):
 
 
 def parse_file(file_path: str,  markers: list[str]) -> str:
+
+    """
+    Load text from file, replace markers with input from user and return it as a copy.
+    Assume natural language - marks correspond to whole words,
+        may be prefixed with whitespace character
+        and may be postfixed with whitespace character or sequence generated from ',.?!;'.
+    Every whitespace character sequence is replaced with single space.
+
+    :param file_path: Data under parsing location.
+    :param markers: Sequence of words searched for in string.
+    :return: Updated copy of text.
+    """
 
     if not type(file_path) is str:
         raise TypeError(f"'{type(file_path).__name__}' object is not a string")
