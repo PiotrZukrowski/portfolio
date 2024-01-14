@@ -20,7 +20,7 @@ def get_markers_replaced(string: str, markers: list[str]):
     if not type(file_path) is str:
         raise TypeError(f"'{type(file_path).__name__}' object is not a string")
     if not hasattr(markers, '__contains__'):
-        raise TypeError(f"'{type(marks).__name__}' object does not define '__contains__' operator")
+        raise TypeError(f"'{type(markers).__name__}' object does not define '__contains__' operator")
 
     text_new: str = ''
     words: list[str] = string.split()
