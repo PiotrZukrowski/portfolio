@@ -17,8 +17,8 @@ def get_markers_replaced(string: str, markers: list[str]):
     :return: Updated copy of text.
     """
 
-    if not type(file_path) is str:
-        raise TypeError(f"'{type(file_path).__name__}' object is not a string")
+    if not type(string) is str:
+        raise TypeError(f"'{type(string).__name__}' object is not a string")
     if not hasattr(markers, '__contains__'):
         raise TypeError(f"'{type(markers).__name__}' object does not define '__contains__' operator")
 
