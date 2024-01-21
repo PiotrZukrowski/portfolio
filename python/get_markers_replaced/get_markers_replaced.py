@@ -1,20 +1,23 @@
 """
-Parser replacing markers from string.
+A parser replacing markers from a string.
 """
+
+
+import os.path
 
 
 def get_markers_replaced(string: str, markers: list[str]):
 
     """
-    Return copy of given string with marks replaced with input from user.
-    Assume natural language - marks correspond to whole words,
-        may be prefixed with whitespace character
-        and may be postfixed with whitespace character or sequence generated from ',.?!;'.
-    Every whitespace character sequence is replaced with single space.
+    Return a copy of the given string with markers replaced with user input.
+    Assume natural language - markers correspond to whole words,
+        may be prefixed by a whitespace character,
+        and may be postfixed by a whitespace character or a sequence generated from ',.?!;'.
+    Every whitespace character sequence is replaced with a single space.
 
-    :param string: Data under parsing.
-    :param marks: Sequence of words searched for in string.
-    :return: Updated copy of text.
+    :param string: The data under parsing.
+    :param markers: The sequence of words searched for in the string.
+    :return: An updated copy of text.
     """
 
     if not type(string) is str:
@@ -38,19 +41,23 @@ def get_markers_replaced(string: str, markers: list[str]):
 def parse_file(file_path: str,  markers: list[str]) -> str:
 
     """
-    Load text from file, replace markers with input from user and return it as a copy.
-    Assume natural language - marks correspond to whole words,
-        may be prefixed with whitespace character
-        and may be postfixed with whitespace character or sequence generated from ',.?!;'.
-    Every whitespace character sequence is replaced with single space.
+    Load a text file.
+    Replace markers with user input.
+    Return an updated text as a copy.
+    Assume natural language - markers correspond to whole words,
+        may be prefixed by a whitespace character,
+        and may be postfixed by a whitespace character or a sequence generated from ',.?!;'.
+    Every whitespace character sequence is replaced with a single space.
 
-    :param file_path: Data under parsing location.
-    :param markers: Sequence of words searched for in string.
-    :return: Updated copy of text.
+    :param file_path: The location of the data under parsing.
+    :param markers: The sequence of words searched for in the text.
+    :return: An updated copy of the text.
     """
 
     if not type(file_path) is str:
         raise TypeError(f"'{type(file_path).__name__}' object is not a string")
+    if not os.path.isfile(file_path):
+        raise FileNotFoundError(f"{file_path} is not a valid file path")
     if not hasattr(markers, '__contains__'):
         raise TypeError(f"'{type(markers).__name__}' object does not define '__contains__' operator")
 
