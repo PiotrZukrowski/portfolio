@@ -1,18 +1,18 @@
 """
-Palindrome checker.
+A palindrome checker.
 """
 
 
 def get_is_palindrome(sequence) -> bool:
 
     """
-    Return whether the sequence is palindrome.
-    Implementation uses recurrence.
+    Return whether the sequence is a palindrome.
+    The implementation uses a recurrence.
 
-    :param sequence: Data under examination. It must implement methods:
+    :param sequence: The data under examination. It must implement methods:
         - __len__()
         - __getitem__()
-    :return: Indicator.
+    :return: An indicator whether the sequence is a palindrome
     """
 
     if not hasattr(sequence, '__len__'):
