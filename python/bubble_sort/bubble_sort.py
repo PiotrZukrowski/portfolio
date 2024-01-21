@@ -1,32 +1,33 @@
 """
-Sorting function based on bubble sort algorithm.
+A sorting function based on the bubble sort algorithm.
 """
 
-def bubble_sort(iterable, reverted: bool = False):
+def bubble_sort(iterable, reverse: bool = False):
 
     """
-    Sort iterable in-place (i.e. the list itself is modified), stable (i.e. the
-        order of two equal elements is maintained) and return sorted.
+    Sort the iterable in-place (i.e. the list itself is modified).
+    Stable (i.e. the order of two equal elements is maintained).
+    Return a sorted iterable.
 
-    :param iterable: Data
-    :param reverted: Descending sorting order indicator
-    :return: Sorted iterable
+    :param iterable: The data to be sorted
+    :param reverse: The flag can be set to sort in descending order
+    :return: A sorted iterable
     """
 
-    if not hasattr(iterable, '__iter__'):
-        raise TypeError(f"'{type(iterable).__name__}' object is not iterable")
     if not hasattr(iterable, '__len__'):
         raise TypeError(f"'{type(iterable).__name__}' object does not define '__len__' operator")
-    if not reverted and not hasattr(iterable, '__gt__'):
+    if not hasattr(iterable, '__getitem__'):
+        raise TypeError(f"'{type(iterable).__name__}' object does not define '__getitem__' operator")
+    if not reverse and not hasattr(iterable, '__gt__'):
         raise TypeError(f"'{type(iterable).__name__}' object does not define '__gt__' operator")
-    if reverted and not hasattr(iterable, '__lt__'):
+    if reverse and not hasattr(iterable, '__lt__'):
         raise TypeError(f"'{type(iterable).__name__}' object does not define '__lt__' operator")
 
     length: int = len(iterable)
     for i in range(length - 1):
         is_ongoing: bool = False
         for j in range(length - 1 - i):
-            if iterable[j] > iterable[j+1] if not reverted else iterable[j] < iterable[j+1]:
+            if iterable[j] > iterable[j+1] if not reverse else iterable[j] < iterable[j+1]:
                 iterable[j], iterable[j+1] = iterable[j+1], iterable[j]
                 is_ongoing: bool = True
         if not is_ongoing:
@@ -38,7 +39,7 @@ if __name__ == '__main__':
     a: list = [0, 2, 1, 3]
     print(f'{a = }')
     print(f'{bubble_sort(a) = }')
-    print(f'{bubble_sort(a, reverted=True) = }')
+    print(f'{bubble_sort(a, reverse=True) = }')
     help(__name__)
 
     # rainy day . special
