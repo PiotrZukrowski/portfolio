@@ -18,9 +18,9 @@ def get_new_matrix(max_row: int, max_col: int) -> list[list[bool]]:
     """
 
     if type(max_row) is not int:
-        raise TypeError(f"'max_row' parameter must be an int, not {type(max_row)}'")
+        raise TypeError(f"'max_row' parameter must be an int, not {type(max_row)}")
     if type(max_col) is not int:
-        raise TypeError(f"'max_row' parameter must be an int, not {type(max_col)}'")
+        raise TypeError(f"'max_row' parameter must be an int, not {type(max_col)}")
     if max_row < 1:
         raise ValueError(f"'max_row' parameter must be greater than zero")
     if max_col < 1:
@@ -43,7 +43,7 @@ def fill_matrix_randomly(matrix: list[list[bool]]) -> None:
     """
 
     if type(matrix) is not list:
-        raise TypeError(f"'matrix' parameter must be a list, not {type(matrix)}'")
+        raise TypeError(f"'matrix' parameter must be a list, not {type(matrix)}")
 
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
@@ -60,7 +60,7 @@ def get_next_generation(matrix: list[list[bool]]) -> list[list[bool]]:
     """
 
     if type(matrix) is not list:
-        raise TypeError(f"'matrix' parameter must be a list, not {type(matrix)}'")
+        raise TypeError(f"'matrix' parameter must be a list, not {type(matrix)}")
 
     matrix_new: list[list[bool]] = []
     for i in range(len(matrix)):
