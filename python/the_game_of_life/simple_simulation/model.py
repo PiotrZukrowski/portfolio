@@ -102,7 +102,7 @@ def update_cell(matrix_old: list[list[bool]],
         raise ValueError(f"'pos_col' parameter must be a non-negative integer")
     if pos_row > len(matrix_new) + 1:
         raise ValueError(f"'pos_row' parameter must be lower than list Y-axis")
-    if pos_col > len(matrix_new[0]) + 1:
+    if pos_col > len(matrix_new[pos_row]) + 1:
         raise ValueError(f"'pos_col' parameter must be lower than list X-axis")
 
     old_value: bool = matrix_old[pos_row][pos_col]
