@@ -1,5 +1,9 @@
 """
 A parser replacing markers from a string.
+
+Presentation of basic skill:
+- Working with files.
+- Splitting tasks into separate functions.
 """
 
 
