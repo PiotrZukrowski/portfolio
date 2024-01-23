@@ -2,7 +2,10 @@
 The Game of Life.
 Presentation of an example.
 
-Presentation of basic working with graphical interface skill.
+Presentation of the implementing simulation skill.
+
+Presentation of the basic working with graphical interface skill:
+- Drawing on the screen.
 """
 
 
