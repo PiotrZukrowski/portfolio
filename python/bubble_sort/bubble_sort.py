@@ -3,7 +3,7 @@ The Bubble Sort Algorithm.
 
 A sorting function based on the bubble sort algorithm.
 
-Presentation of working with algorithms on basic level
+Presentation of working with algorithms on basic level:
 - Understanding abstraction.
 - Implementing architecture.
 - Optimizing performance.
