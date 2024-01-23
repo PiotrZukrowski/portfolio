@@ -1,5 +1,17 @@
 """
+The Bubble Sort Algorithm.
+
 A sorting function based on the bubble sort algorithm.
+
+Presentation of working with algorithms on basic level
+- Understanding abstraction.
+- Implementing architecture.
+- Optimizing performance.
+
+Presentation of basic skills:
+- Accepting parameter based on methods instead of strict type.
+- Recognizing additional options of high value for users.
+- Recognizing requirements for an input data verification.
 """
 
 def bubble_sort(iterable, reverse: bool = False):
@@ -9,9 +21,9 @@ def bubble_sort(iterable, reverse: bool = False):
     Stable (i.e. the order of two equal elements is maintained).
     Return a sorted iterable.
 
-    :param iterable: The data to be sorted
-    :param reverse: The flag can be set to sort in descending order
-    :return: A sorted iterable
+    :param iterable: The data to be sorted.
+    :param reverse: The flag can be set to sort in descending order.
+    :return: A sorted iterable.
     """
 
     if not hasattr(iterable, '__len__'):
