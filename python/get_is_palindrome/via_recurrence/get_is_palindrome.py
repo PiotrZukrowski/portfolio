@@ -33,34 +33,286 @@ def get_is_palindrome(sequence) -> bool:
         return False
 
 
-if __name__ == '__main__':
+def test_sunny_day():
+    # documentation written by chat gpt
+    """
+    Test function for a sunny day scenario with a palindrome string.
 
-    # sunny day
-    a = 'kajak'
-    print(f'{a = }')
-    print(f'{get_is_palindrome(a) = }')  # sunny day scenario
+    This function tests the `get_is_palindrome` function with a palindrome string.
+    It prints the original string and the result of the palindrome check.
+
+    Example:
+    --------
+    > test_sunny_day()
+    sunny day
+    s = 'kajak'
+    get_is_palindrome(s) = True
+
+    Notes:
+    ------
+    - Ensure that the get_is_palindrome function is defined before running this test.
+    - This test demonstrates a sunny day scenario where the input string is a palindrome.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('sunny day')
+
+    # Providing a palindrome string for demonstration purposes  # <- written by chat gpt
+    s = 'kajak'
+    print(f'{s = }')
+
+    # Checking if the string is a palindrome using the get_is_palindrome function  # <- written by chat gpt
+    print(f'{get_is_palindrome(s) = }')
+
+
+def test_sunny_day_one_letter():
+    # documentation written by chat gpt
+    """
+    Test function for a sunny day scenario with a one-letter string.
+
+    This function tests the `get_is_palindrome` function with a one-letter string.
+    It prints the original string and the result of the palindrome check.
+
+    Example:
+    --------
+    > test_sunny_day_one_letter()
+    sunny day - one letter
+    s = 'k'
+    get_is_palindrome(s) = True
+
+    Notes:
+    ------
+    - Ensure that the get_is_palindrome function is defined before running this test.
+    - This test demonstrates a sunny day scenario where the input string consists of only one letter.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('sunny day - one letter')
+
+    # Providing a one-letter string for demonstration purposes  # <- written by chat gpt
+    s = 'k'
+    print(f'{s = }')
+
+    # Checking if the string is a palindrome using the get_is_palindrome function  # <- written by chat gpt
+    print(f'{get_is_palindrome(s) = }')
+
+
+def test_sunny_day_diff_type():
+    # documentation written by chat gpt
+    """
+    Test function for a sunny day scenario with a non-string input.
+
+    This function tests the `get_is_palindrome` function with a non-string input.
+    It prints the original input and the result of the palindrome check.
+
+    Example:
+    --------
+    > test_sunny_day_diff_type()
+    sunny day - non-string input
+    l = [0, 1, 0]
+    get_is_palindrome(l) = True
+
+    Notes:
+    ------
+    - Ensure that the get_is_palindrome function is defined before running this test.
+    - This test demonstrates a sunny day scenario where the input is a non-string iterable (list).
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('sunny day - non-string input')
+
+    # Providing a non-string iterable (list) for demonstration purposes  # <- written by chat gpt
+    l = [0, 1, 0]
+    print(f'{l = }')
+
+    # Checking if the input is a palindrome using the get_is_palindrome function  # <- written by chat gpt
+    print(f'{get_is_palindrome(l) = }')
+
+
+def test_documentation():
+    # documentation written by chat gpt
+    """
+    Test function for printing module documentation using the help function.
+
+    This function prints the documentation for the current module (denoted by __name__)
+    using the help function. It serves as a demonstration for accessing module-level documentation.
+
+    Example:
+    --------
+    > test_documentation()
+    print documentation
+    Help on module __main__:
+
+    ...
+
+    Notes:
+    ------
+    - The help function is a built-in Python function that provides interactive help on modules, classes, functions, etc.
+    - The specific content of the help output will vary based on the module's documentation.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('print documentation')
     help(__name__)
 
-    # rainy day
-    b = 'kaja'
-    print(f'{b = }')
-    print(f'{get_is_palindrome(b) = }')  # rainy day scenario, even number of elements
-    c = 'kaj'
-    print(f'{c = }')
-    print(f'{get_is_palindrome(c) = }')  # rainy day scenario, odd number of elements
 
-    # sunny day . special
-    d = 'k'
-    print(f'{d = }')
-    print(f'{get_is_palindrome(d) = }')  # sunny day scenario, one letter
-    e = [0, 1, 0]
-    print(f'{e = }' )
-    print(f'{get_is_palindrome(e) = }')  # sunny day scenario, non-string input
+def test_rainy_day_even():
+    # documentation written by chat gpt
+    """
+    Test function for a rainy day scenario with a string of even length.
 
-    # rainy day . special
-    f = object()
-    print(f'{f = }')
+    This function tests the `get_is_palindrome` function with a string of even length.
+    It prints the original string and the result of the palindrome check.
+
+    Example:
+    --------
+    > test_rainy_day_even()
+    rainy day - even number of elements
+    s = 'kaja'
+    get_is_palindrome(s) = False
+
+    Notes:
+    ------
+    - Ensure that the get_is_palindrome function is defined before running this test.
+    - This test demonstrates a rainy day scenario where the input string has an even number of elements.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('rainy day - even number of elements')
+
+    # Providing a string of even length for demonstration purposes  # <- written by chat gpt
+    s = 'kaja'
+    print(f'{s = }')
+
+    # Checking if the string is a palindrome using the get_is_palindrome function  # <- written by chat gpt
+    print(f'{get_is_palindrome(s) = }')
+
+
+def test_rainy_day_odd():
+    # documentation written by chat gpt
+    """
+    Test function for a rainy day scenario with a string of odd length.
+
+    This function tests the `get_is_palindrome` function with a string of odd length.
+    It prints the original string and the result of the palindrome check.
+
+    Example:
+    --------
+    > test_rainy_day_odd()
+    rainy day - odd number of elements
+    s = 'kaj'
+    get_is_palindrome(s) = False
+
+    Notes:
+    ------
+    - Ensure that the get_is_palindrome function is defined before running this test.
+    - This test demonstrates a rainy day scenario where the input string has an odd number of elements.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('rainy day - odd number of elements')
+
+    # Providing a string of odd length for demonstration purposes  # <- written by chat gpt
+    s = 'kaj'
+    print(f'{s = }')
+
+    # Checking if the string is a palindrome using the get_is_palindrome function  # <- written by chat gpt
+    print(f'{get_is_palindrome(s) = }')
+
+
+def test_rainy_wrong_type():
+    # documentation written by chat gpt
+    """
+    Test function for a rainy day scenario with an input of incorrect type.
+
+    This function tests the `get_is_palindrome` function with an input of incorrect type.
+    It prints the original input and catches the TypeError that is expected to be raised,
+    then prints the error message.
+
+    Example:
+    --------
+    > test_rainy_wrong_type()
+    rainy day - odd number of elements
+    o = <object object at 0x...>
+    error = TypeError("Input must be a string or an iterable of characters.")
+
+    Notes:
+    ------
+    - Ensure that the get_is_palindrome function is defined before running this test.
+    - This test demonstrates a rainy day scenario where the input is of incorrect type.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('rainy day - odd number of elements')
+
+    # Providing an object for demonstration purposes  # <- written by chat gpt
+    o = object()
+    print(f'{o = }')
+
     try:
-        print(f'{get_is_palindrome(f) = }')  # rainy day scenario, wrong type
+        # Attempting to check if the object is a palindrome using the get_is_palindrome function  # <- written by chat gpt
+        print(f'{get_is_palindrome(o) = }')
     except TypeError as error:
+        # Catching and printing the expected TypeError  # <- written by chat gpt
         print(f'{error = }')
+
+
+if __name__ == '__main__':
+
+    test_sunny_day(); print()
+    test_sunny_day_one_letter(); print()
+    test_sunny_day_diff_type(); print()
+    test_documentation(); print()
+
+    test_rainy_day_even(); print()
+    test_rainy_day_odd(); print()
+    test_rainy_wrong_type()
