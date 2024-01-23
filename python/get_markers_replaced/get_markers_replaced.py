@@ -84,31 +84,199 @@ def parse_file(file_path: str,  markers: list[str]) -> str:
     return text
 
 
-if __name__ == '__main__':
+def test_sunny_day():
+    # documentation written by chat gpt
+    """
+    Test function for a sunny day scenario of parsing a file with specified markers.
 
-    # sunny day
+    This function tests the `parse_file` function in a sunny day scenario by providing a list of markers
+    and a valid file path. It prints the markers and file path, then prints the result of parsing the file.
+
+    Example:
+    --------
+    > test_sunny_day()
+    sunny day
+    markers = ['NOUN', 'VERB', 'ADJECTIVE']
+    file_path = 'lorem.txt'
+    Parsed content: {'NOUN': 12, 'VERB': 8, 'ADJECTIVE': 5}
+
+    Notes:
+    ------
+    - Ensure that the parse_file function is defined before running this test.
+    - This test demonstrates a sunny day scenario where the parse_file function successfully parses the file.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('sunny day')
+
+    # Providing a list of markers and a valid file path for demonstration purposes  # <- written by chat gpt
     markers: list[str] = ['NOUN', 'VERB', 'ADJECTIVE']
     print(f'{markers = }')
+
     file_path: str = 'lorem.txt'
     print(f'{file_path = }')
+
+    # Parsing the file with specified markers and printing the result  # <- written by chat gpt
     print(parse_file(file_path, markers))
 
-    # rainy day
-    file_path_b: str = '../lorem.txt'
-    print(f'{file_path_b = }')
+
+def test_rainy_day_wrong_path():
+    # documentation written by chat gpt
+    """
+    Test function for a rainy day scenario with an incorrect file path.
+
+    This function tests the `parse_file` function in a rainy day scenario by providing a list of markers
+    and an incorrect file path. It prints the markers and file path, then catches the FileNotFoundError
+    that is expected to be raised, and prints the error message.
+
+    Example:
+    --------
+    > test_rainy_day_wrong_path()
+    rainy day - wrong file_path
+    markers = ['NOUN', 'VERB', 'ADJECTIVE']
+    file_path = '../lorem.txt'
+    error = FileNotFoundError("[Errno 2] No such file or directory: '../lorem.txt'")
+
+    Notes:
+    ------
+    - Ensure that the parse_file function is defined before running this test.
+    - This test demonstrates a rainy day scenario where the parse_file function raises a FileNotFoundError
+      due to providing an incorrect file path.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('rainy day - wrong file_path')
+
+    # Providing a list of markers and an incorrect file path for demonstration purposes  # <- written by chat gpt
+    markers: list[str] = ['NOUN', 'VERB', 'ADJECTIVE']
+    print(f'{markers = }')
+
+    file_path: str = '../lorem.txt'
+    print(f'{file_path = }')
+
     try:
-        print(parse_file(file_path_b, markers))  # rainy day scenario, wrong file_path
-    except Exception as error:
+        # Attempting to parse the file with specified markers and catching the expected FileNotFoundError  # <- written by chat gpt
+        print(parse_file(file_path, markers))
+    except FileNotFoundError as error:
+        # Catching and printing the expected FileNotFoundError  # <- written by chat gpt
         print(f'{error = }')
-    file_path_c: int = 0
-    print(f'{file_path_c = }')
+
+
+def test_rainy_day_path_wrong_type():
+    # documentation written by chat gpt
+    """
+    Test function for a rainy day scenario with an incorrect file path type.
+
+    This function tests the `parse_file` function in a rainy day scenario by providing a list of markers
+    and an incorrect file path type. It prints the markers and file path, then catches the TypeError
+    that is expected to be raised, and prints the error message.
+
+    Example:
+    --------
+    > test_rainy_day_path_wrong_type()
+    rainy day - file_path wrong type
+    markers = ['NOUN', 'VERB', 'ADJECTIVE']
+    file_path = 0
+    error = TypeError("file_path must be a string representing the file path.")
+
+    Notes:
+    ------
+    - Ensure that the parse_file function is defined before running this test.
+    - This test demonstrates a rainy day scenario where the parse_file function raises a TypeError
+      due to providing an incorrect type for the file path.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('rainy day - file_path wrong type')
+
+    # Providing a list of markers and an incorrect file path type for demonstration purposes  # <- written by chat gpt
+    markers: list[str] = ['NOUN', 'VERB', 'ADJECTIVE']
+    print(f'{markers = }')
+
+    file_path: int = 0
+    print(f'{file_path = }')
+
     try:
-        print(parse_file(file_path_c, markers))  # rainy day scenario, file_path wrong type
-    except Exception as error:
+        # Attempting to parse the file with specified markers and catching the expected TypeError  # <- written by chat gpt
+        print(parse_file(file_path, markers))
+    except TypeError as error:
+        # Catching and printing the expected TypeError  # <- written by chat gpt
         print(f'{error = }')
-    markers_d = object()
-    print(f'{markers_d = }')
+
+
+def test_rainy_day_markers_wrong_type():
+    # documentation written by chat gpt
+    """
+    Test function for a rainy day scenario with incorrect markers type.
+
+    This function tests the `parse_file` function in a rainy day scenario by providing incorrect markers type.
+    It prints the markers and file path, then catches the TypeError that is expected to be raised, and prints the error message.
+
+    Example:
+    --------
+    > test_rainy_day_markers_wrong_type()
+    rainy day - markers wrong type
+    markers = <object object at 0x...>
+    file_path = 'lorem.txt'
+    error = TypeError("markers must be a list of strings representing part-of-speech tags.")
+
+    Notes:
+    ------
+    - Ensure that the parse_file function is defined before running this test.
+    - This test demonstrates a rainy day scenario where the parse_file function raises a TypeError
+      due to providing an incorrect type for the markers.
+
+    Parameters:
+    -----------
+    - None
+
+    Returns:
+    --------
+    - None
+
+    """
+    print('rainy day - markers wrong type')
+
+    # Providing incorrect markers type (object) for demonstration purposes  # <- written by chat gpt
+    markers = object()
+    print(f'{markers = }')
+
+    file_path: str = 'lorem.txt'
+    print(f'{file_path = }')
+
     try:
-        print(parse_file(file_path, markers_d))  # rainy day scenario, marks wrong type
-    except Exception as error:
+        # Attempting to parse the file with specified markers and catching the expected TypeError  # <- written by chat gpt
+        print(parse_file(file_path, markers))
+    except TypeError as error:
+        # Catching and printing the expected TypeError  # <- written by chat gpt
         print(f'{error = }')
+
+
+if __name__ == '__main__':
+
+    test_sunny_day(); print()
+
+    test_rainy_day_wrong_path(); print()
+    test_rainy_day_path_wrong_type(); print()
+    test_rainy_day_markers_wrong_type()
