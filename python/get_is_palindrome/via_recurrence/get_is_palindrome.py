@@ -1,5 +1,10 @@
 """
 A palindrome checker.
+
+Presentation of basic skills:
+- Understanding and implementing recursion.
+- Accepting parameter based on methods instead of strict type.
+- Recognizing requirements for an input data verification.
 """
 
 
@@ -7,12 +12,12 @@ def get_is_palindrome(sequence) -> bool:
 
     """
     Return whether the sequence is a palindrome.
-    The implementation uses a recurrence.
+    The implementation uses a recursion.
 
     :param sequence: The data under examination. It must implement methods:
         - __len__()
         - __getitem__()
-    :return: An indicator whether the sequence is a palindrome
+    :return: An indicator whether the sequence is a palindrome.
     """
 
     if not hasattr(sequence, '__len__'):
