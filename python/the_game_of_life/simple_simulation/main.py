@@ -1,6 +1,8 @@
 """
 The Game of Life.
-A presentation of an example.
+Presentation of an example.
+
+Presentation of basic working with graphical interface skill.
 """
 
 
