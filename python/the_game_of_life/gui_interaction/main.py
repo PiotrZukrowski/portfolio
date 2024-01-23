@@ -1,6 +1,13 @@
 """
 The Game of Life.
-A presentation of an example.
+An interactive presentation.
+
+Presentation of the implementing simulation skill.
+
+Presentation of the basic working with graphical interface skill:
+- Drawing on the screen.
+- Handling input from the user.
+- Designing and implementing multiple graphical objects changes after single signal.
 """
 
 
