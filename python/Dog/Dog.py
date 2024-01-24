@@ -193,7 +193,7 @@ def test_sunny_day_age_lowest():
     dog_3.bark()
 
 
-def test_rainy_name_wrong_type():
+def test_rainy_day_name_wrong_type():
     # documentation written by chat gpt
     """
     Test function for a rainy day scenario with the wrong type for the 'name' parameter.
@@ -203,7 +203,7 @@ def test_rainy_name_wrong_type():
 
     Example:
     --------
-    > test_rainy_name_wrong_type()
+    > test_rainy_day_name_wrong_type()
     rainy day - name wrong type
     dog_e1: Dog = Dog(object(), 0, 0)
     error = TypeError('name must be a string')
@@ -233,7 +233,7 @@ def test_rainy_name_wrong_type():
         print(f'{error = }')
 
 
-def test_rainy_age_wrong_type():
+def test_rainy_day_age_wrong_type():
     # documentation written by chat gpt
     """
     Test function for a rainy day scenario with the wrong type for the 'age' parameter.
@@ -273,7 +273,7 @@ def test_rainy_age_wrong_type():
         print(f'{error = }')
 
 
-def test_rainy_age_wrong_value():
+def test_rainy_day_age_wrong_value():
     # documentation written by chat gpt
     """
     Test function for a rainy day scenario with an invalid value for the 'age' parameter.
@@ -313,7 +313,7 @@ def test_rainy_age_wrong_value():
         print(f'{error = }')
 
 
-def test_rainy_weight_wrong_type():
+def test_rainy_day_weight_wrong_type():
     # documentation written by chat gpt
     """
     Test function for a rainy day scenario with the wrong type for the 'weight' parameter.
@@ -353,7 +353,7 @@ def test_rainy_weight_wrong_type():
         print(f'{error = }')
 
 
-def test_rainy_weight_wrong_value():
+def test_rainy_day_weight_wrong_value():
     # documentation written by chat gpt
     """
     Test function for a rainy day scenario with an invalid value for the 'weight' parameter.
@@ -399,8 +399,8 @@ if __name__ == '__main__':
     test_sunny_day_age_threshold_higher(); print()
     test_sunny_day_age_lowest(); print()
 
-    test_rainy_name_wrong_type(); print()
-    test_rainy_age_wrong_type(); print()
-    test_rainy_age_wrong_value(); print()
-    test_rainy_weight_wrong_type(); print()
-    test_rainy_weight_wrong_value()
+    test_rainy_day_name_wrong_type(); print()
+    test_rainy_day_age_wrong_type(); print()
+    test_rainy_day_age_wrong_value(); print()
+    test_rainy_day_weight_wrong_type(); print()
+    test_rainy_day_weight_wrong_value()
