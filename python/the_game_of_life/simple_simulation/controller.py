@@ -64,9 +64,12 @@ def next_generation(matrix: list[list[bool]], widgets: dict) -> list[list[bool]]
     if type(widgets) is not dict:
         raise TypeError(f"'widgets' parameter must be a dict, not {type(widgets)}")
 
-    clear_screen(widgets, update_view=False)
-    matrix: list[list[bool]] = model.get_next_generation(matrix)
-    draw_generation(matrix, widgets)
+    try:
+        clear_screen(widgets, update_view=False)
+        matrix: list[list[bool]] = model.get_next_generation(matrix)
+        draw_generation(matrix, widgets)
+    except tkinter.TclError:
+        pass
     return matrix
 
 
