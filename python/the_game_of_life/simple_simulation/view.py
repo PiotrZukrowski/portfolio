@@ -43,4 +43,7 @@ def setup(matrix: list[list[bool]], cell_size: int) -> dict:
 
 
 def mainloop():
-    tkinter.mainloop()
+    try:
+        tkinter.mainloop()
+    except RuntimeError:
+        pass
