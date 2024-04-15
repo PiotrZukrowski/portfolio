@@ -1,6 +1,4 @@
 package the_game_of_life.gui_interaction;
-// Compile package: Java> javac the_game_of_life/gui_interaction/ModelTestDrive.java
-// Invoke application: Java> java the_game_of_life/gui_interaction/ModelTestDrive
 
 public class ModelTestDrive {
 /**
