@@ -1,6 +1,4 @@
 package the_game_of_life.gui_interaction;
-// Compile package: Java> javac the_game_of_life/gui_interaction/Controller.java
-// Invoke application: Java> java the_game_of_life/gui_interaction/Controller
 
 import java.util.Map;
 import java.awt.*;
@@ -23,13 +21,6 @@ public class Controller {
     @param return Null.
 */
 
-/*
-    if type(matrix) is not list:
-        raise TypeError(f"'matrix' parameter must be a list, not {type(matrix)}")
-    if type(widgets) is not dict:
-        raise TypeError(f"'widgets' parameter must be a dict, not {type(widgets)}")
-*/
-
     ((Canvas) widgets.get("canvas")).repaint();
 
   }
@@ -43,13 +34,6 @@ public class Controller {
     @param matrix The table containing old pairs of cell coordinates.
     @param widgets The map object containing JComponents and cellSize.
     @param return A table containing new pairs of cell coordinates.
-*/
-
-/*
-    if type(matrix) is not list:
-        raise TypeError(f"'matrix' parameter must be a list, not {type(matrix)}")
-    if type(widgets) is not dict:
-        raise TypeError(f"'widgets' parameter must be a dict, not {type(widgets)}")
 */
 
     Canvas canvas = (Canvas) widgets.get("canvas");
@@ -68,23 +52,6 @@ public class Controller {
     @param posRow The index of the row.
     @param posCol The index of the column.
     @param return Null.
-*/
-
-/*
-    if type(widgets) is not dict:
-        raise TypeError(f"'widgets' parameter must be a dict, not {type(widgets)}")
-    if type(pos_row) is not int:
-        raise TypeError(f"'pos_row' parameter must be an int, not {type(pos_row)}")
-    if type(pos_col) is not int:
-        raise TypeError(f"'pos_col' parameter must be an int, not {type(pos_col)}")
-    if pos_row < 0:
-        raise ValueError(f"'pos_row' parameter must be a non-negative integer")
-    if pos_col < 0:
-        raise ValueError(f"'pos_col' parameter must be a non-negative integer")
-    if pos_row > widgets['canvas'].winfo_reqheight():
-        raise ValueError(f"'pos_row' parameter must be lower than list Y-axis")
-    if pos_col > widgets['canvas'].winfo_reqwidth():
-        raise ValueError(f"'pos_col' parameter must be lower than list X-axis")
 */
 
     int cellSize = (int) widgets.get("cellSize");
@@ -417,21 +384,6 @@ The Game of Life dedicated abstraction level for canvas listener.
       // Debug: System.out.println("Class 'Canvas'. Method 'mouseClicked'. posRow = " + posRow);
       int posCol = (int) (event.getPoint().x / cellSize);
       // Debug: System.out.println("Class 'Canvas'. Method 'mouseClicked'. posCol = " + posCol);
-
-/*
-    // if pos_row < 0:  # already satisfied
-    //     raise ValueError(f"'pos_row' parameter must be a non-negative integer")
-    // if pos_col < 0:  # already satisfied
-    //     raise ValueError(f"'pos_col' parameter must be a non-negative integer")
-    if pos_row > len(matrix) + 1:
-        raise ValueError(f"'pos_row' parameter must be lower than list Y-axis")
-    if type(matrix[pos_row]) is not list:
-        raise TypeError(f"'matrix[{pos_row}]' parameter must be a list, not {type(matrix[pos_row])}")
-    if pos_col > len(matrix[pos_row]) + 1:
-        raise ValueError(f"'pos_col' parameter must be lower than list X-axis")
-    if type(matrix[pos_row][pos_col]) is not bool:
-        raise TypeError(f"'matrix[{pos_row}][{pos_col}]' parameter must be a bool, not {type(matrix[pos_col])}")
-*/
 
       if (canvas.getMatrixCellValue(posRow, posCol)) {
         canvas.setMatrixCellValue(posRow, posCol, false);
