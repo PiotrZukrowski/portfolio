@@ -1,6 +1,4 @@
 package the_game_of_life.gui_interaction;
-// Compile package: Java> javac the_game_of_life/gui_interaction/TheGameOfLife.java
-// Invoke application: Java> java the_game_of_life/gui_interaction/TheGameOfLife
 
 import java.util.Map;
 
@@ -27,8 +25,3 @@ Presentation of the basic working with graphical interface skill:
     Map<String, Object>  widgets = View.setup(matrix, CELL_SIZE);
   }
 }
-
-/**
-Plan
-- przekompilować wszystkie pliki i załączyć do git huba
-*/
